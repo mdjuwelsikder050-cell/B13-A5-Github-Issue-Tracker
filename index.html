@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in · GitHub Issues Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+      </div>
+      <h1>GitHub Issues Tracker</h1>
+      <p class="subtitle">Sign in to view and manage your project issues</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+        </div>
+        <p class="form-error" id="formError" role="alert"></p>
+        <button type="submit" class="btn-primary">Sign in</button>
+      </form>
+
+      <div class="demo-box" >
+        <strong>Demo credentials</strong>
+        Username: <code>admin</code> <br> &nbsp; Password: <code>admin123</code>
+      </div>
+    </section>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

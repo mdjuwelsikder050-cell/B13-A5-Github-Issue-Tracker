@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issues · GitHub Issues Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a class="logo" href="main.html">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+        </span>
+        <span>GitHub Issues Tracker</span>
+      </a>
+      <div class="nav-right">
+        <form class="search-form" id="searchForm" role="search">
+          <input id="searchInput" type="search" placeholder="Search issues..." aria-label="Search issues" />
+          <button type="submit">Search</button>
+        </form>
+        <button class="btn-ghost" id="logoutBtn" type="button">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="tabs" role="tablist" aria-label="Issue status">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="all">All</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="open">Open</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="closed">Closed</button>
+      </div>
+
+      <div class="summary">
+        <div class="summary-left">
+          <div class="summary-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+          </div>
+          <div>
+            <div class="summary-count"><span id="issueCount">0</span> Issues</div>
+            <div class="summary-text" id="summaryText">Track and manage your project issues</div>
+          </div>
+        </div>
+        <div class="legend" aria-label="Legend">
+          <span><i class="dot open"></i> Open <span id="openCount">0</span></span>
+          <span><i class="dot closed"></i> Closed <span id="closedCount">0</span></span>
+        </div>
+      </div>
+
+      <div id="notice" class="notice hidden"></div>
+
+      <div class="grid-wrap">
+        <div id="spinner" class="spinner-wrap hidden" role="status" aria-label="Loading issues"><div class="spinner"></div></div>
+        <div id="grid" class="grid"></div>
+        <div id="empty" class="empty hidden"><strong>No issues found</strong>Try a different search or switch tabs.</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
